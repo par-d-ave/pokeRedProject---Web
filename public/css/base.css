@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--dmg-0);
+  color: var(--dmg-3);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--space-3);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-pixel);
+  line-height: 1.4;
+}
+
+h1 { font-size: 1.25rem; }
+h2 { font-size: 1rem; }
+h3 { font-size: 0.875rem; }
+
+a { color: var(--dmg-3); }
+
+/* Cabecera y pie (partials de la Fase 1) */
+.site-header {
+  background: var(--dmg-3);
+  border-bottom: 4px solid var(--dmg-2);
+}
+
+.site-header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.site-header a {
+  color: var(--dmg-0);
+  text-decoration: none;
+}
+
+.site-header nav a {
+  margin-left: var(--space-3);
+}
+
+.site-title {
+  font-family: var(--font-pixel);
+  font-size: 0.875rem;
+}
+
+.site-footer {
+  margin-top: var(--space-4);
+  border-top: 4px solid var(--dmg-3);
+  font-size: 0.875rem;
+}
+
+.site-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.site-footer p {
+  margin: 0;
+}

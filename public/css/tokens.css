@@ -1,0 +1,19 @@
+:root {
+  /* Paleta Game Boy DMG-01 */
+  --dmg-0: #9bbc0f;
+  --dmg-1: #8bac0f;
+  --dmg-2: #306230;
+  --dmg-3: #0f380f;
+  --cta: #9a2257;
+
+  /* Fuentes */
+  --font-pixel: 'Press Start 2P', monospace;
+  --font-body: system-ui, sans-serif;
+  --font-code: ui-monospace, Consolas, monospace;
+
+  /* Espaciados */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 32px;
+}

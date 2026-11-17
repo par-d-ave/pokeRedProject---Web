@@ -1,0 +1,25 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main class="container">
+  <h1>Implementación técnica</h1>
+  <p>Explicación a nivel ensamblador (RGBDS, Game Boy LR35902, derivada del Z80) de cada mejora.</p>
+
+  <nav class="anchor-nav" aria-label="Mejoras">
+    <% improvements.forEach((item) => { %>
+      <a class="badge" href="#<%= item.id %>"><%= item.title %></a>
+    <% }) %>
+  </nav>
+
+  <% improvements.forEach((item) => { %>
+    <section id="<%= item.id %>" class="rpg-box tech-section">
+      <h2><%= item.title %></h2>
+      <p><%= item.detail %></p>
+      <%- include('../partials/code-block', { item }) %>
+    </section>
+  <% }) %>
+
+  <p class="rpg-box">
+    Compatibilidad <code>.sav</code> original: no se modifican estructuras de datos persistentes.
+  </p>
+</main>
+<%- include('../partials/footer') %>

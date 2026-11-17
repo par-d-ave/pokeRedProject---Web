@@ -1,0 +1,81 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main class="container">
+  <section class="hero rpg-box">
+    <h1>PokeRed QoL</h1>
+    <p>Pokémon Rojo sin fricción, manteniendo la compatibilidad de tus partidas <code>.sav</code> originales.</p>
+    <ul>
+      <% improvements.forEach((item, index) => { %>
+        <%- include('../partials/improvement-summary', { item, index }) %>
+      <% }) %>
+    </ul>
+  </section>
+
+  <section class="tech">
+    <h2>Tecnologías</h2>
+
+    <h3>Desarrollo web</h3>
+    <ul class="tech-row">
+      <li class="tech-slot">
+        <div class="tech-box">TS</div><!-- Reemplazar por <img src="/media/typescript.png" alt="TypeScript"> -->
+        <span>TypeScript</span>
+      </li>
+      <li class="tech-slot">
+        <div class="tech-box">JS</div><!-- Reemplazar por <img src="/media/nodejs.png" alt="Node.js"> -->
+        <span>Node.js</span>
+      </li>
+      <li class="tech-slot">
+        <div class="tech-box">EX</div><!-- Reemplazar por <img src="/media/express.png" alt="Express"> -->
+        <span>Express</span>
+      </li>
+      <li class="tech-slot">
+        <div class="tech-box">EJS</div><!-- Reemplazar por <img src="/media/ejs.png" alt="EJS"> -->
+        <span>EJS</span>
+      </li>
+      <li class="tech-slot">
+        <div class="tech-box">H5</div><!-- Reemplazar por <img src="/media/html5.png" alt="HTML5"> -->
+        <span>HTML5</span>
+      </li>
+      <li class="tech-slot">
+        <div class="tech-box">C3</div><!-- Reemplazar por <img src="/media/css3.png" alt="CSS3"> -->
+        <span>CSS3</span>
+      </li>
+    </ul>
+
+    <h3>Hackrom</h3>
+    <ul class="tech-row">
+      <li class="tech-slot">
+        <div class="tech-box">ASM</div><!-- Reemplazar por <img src="/media/asm.png" alt="Game Boy ASM"> -->
+        <span>Game Boy ASM</span>
+      </li>
+      <li class="tech-slot">
+        <div class="tech-box">RGB</div><!-- Reemplazar por <img src="/media/rgbds.png" alt="RGBDS"> -->
+        <span>RGBDS</span>
+      </li>
+      <li class="tech-slot">
+        <div class="tech-box">PRET</div><!-- Reemplazar por <img src="/media/pokered.png" alt="pret/pokered"> -->
+        <span>pret/pokered</span>
+      </li>
+      <li class="tech-slot">
+        <div class="tech-box">MK</div><!-- Reemplazar por <img src="/media/make.png" alt="make"> -->
+        <span>make</span>
+      </li>
+      <li class="tech-slot">
+        <div class="tech-box">GIT</div><!-- Reemplazar por <img src="/media/git.png" alt="Git"> -->
+        <span>Git</span>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Comparativa</h2>
+    <% improvements.forEach((item) => { %>
+      <%- include('../partials/compare-slot', { item }) %>
+    <% }) %>
+  </section>
+
+  <section class="cta">
+    <a class="btn-cta" href="/implementacion">Ver implementación técnica</a>
+  </section>
+</main>
+<%- include('../partials/footer') %>

@@ -1,0 +1,11 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main class="container">
+  <h1>500</h1>
+  <p>Algo ha fallado en el servidor.</p>
+  <% if (locals.stack) { %>
+  <pre><%= stack %></pre>
+  <% } %>
+  <p><a href="/">Volver al inicio</a></p>
+</main>
+<%- include('../partials/footer') %>
