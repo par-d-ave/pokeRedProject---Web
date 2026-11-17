@@ -40,9 +40,9 @@ test('GET /implementacion contiene las 6 anclas', async () => {
   }
 });
 
-test('GET /implementacion tiene 6 botones, 6 bloques de código y el script', async () => {
+test('GET /implementacion tiene 6 botones, 12 bloques de código y el script', async () => {
   const res = await request(createApp()).get('/implementacion');
   assert.equal(count(res.text, /class="copy-btn"/g), 6);
-  assert.equal(count(res.text, /<pre[ >]/g), 6);
+  assert.equal(count(res.text, /<pre[ >]/g), 12);
   assert.match(res.text, /\/js\/copy-code\.js/);
 });

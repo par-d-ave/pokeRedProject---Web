@@ -1,2 +1,7 @@
-<pre class="code-block"><code id="code-<%= item.id %>">; PEGAR DIFF .asm REAL AQUÍ</code></pre>
-<button type="button" class="copy-btn" data-copy-target="code-<%= item.id %>">Copiar código</button>
+<div class="code-compare">
+  <pre class="code-block code-new"><code id="code-<%= item.id %>"><%= item.code.trim() %></code></pre>
+  <pre class="code-block code-orig"><code id="code-original-<%= item.id %>"><%= item.originalCode.trim() %></code></pre>
+  <p class="code-note note-new"><span class="badge">NUEVO</span> <%= item.newNote %></p>
+  <p class="code-note note-orig"><span class="badge">ORIGINAL</span> <%= item.originalNote %></p>
+  <button type="button" class="copy-btn" data-copy-target="code-<%= item.id %>">Copiar código</button>
+</div>
